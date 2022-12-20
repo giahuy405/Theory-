@@ -55,7 +55,7 @@ Ví dụ:
 - **201 CREATED**: Tạo thành công (có thể từ method POST hoặc PUT)
 - **204 NO CONTENT**: Thành công nhưng không có gì trả về trong body cả, thường được dùng cho DELETE hoặc PUT
 - **400 BAD REQUEST**: Lỗi, có thể nguyên nhân từ validate lỗi, thiếu data,...
-- **404 UNAUTHORIZED**: Lỗi liên quan đến thiếu hoặc sai authentication token
+- **401 UNAUTHORIZED**: Lỗi liên quan đến thiếu hoặc sai authentication token
 - **403 FORBIDDEN**: Lỗi liên quan đến không có quyền truy cập
 - **404 NOT FOUND**: Lỗi liên quan tài nguyên không tìm thấy
 - **405 METHOD NOT ALLOWED**: Lỗi liên quan method không được chấp nhận. Ví dụ API chỉ cho phép sử dụng GET, PUT, DELETE nhưng bạn dùng POST thì sẽ trả về lỗi này.

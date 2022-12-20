@@ -188,7 +188,7 @@ Nếu trong quá trình merge có bị conflict thì thao tác theo thứ tự
 
 1. Tìm file conflict trong tab source và fix nó.
 2. Sau khi fix hết các file bị conflict rồi thì dùng `git add .` hoặc add từng file
-3. Tiến hành thêm commit cho những file vừa fix conflict bằng câu lệnh `git merge --continue --no-edit`, nếu muốn edit commit thì `git merge --continue`, còn nếu muốn tự viết commit thì cứ `git commit -m 'thông điệp'` như thường
+3. Tiến hành thêm commit cho những file vừa fix conflict bằng câu lệnh `git commit --no-edit`, nếu muốn edit commit thì `git merge --continue`, còn nếu muốn tự viết commit thì cứ `git commit -m 'thông điệp'` như thường
 4. push hết lên với câu lệnh `git push`
 
 Nếu merge xong rồi mới nhận ra mình không cần merge nữa thì có thể dùng `git reset --hard <commit-của bạn-trước-khi-merge>`. Cách này áp dụng cho cả đã push code hay chưa push đều được.
