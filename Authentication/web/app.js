@@ -29,8 +29,7 @@ class Http {
               })
           return this.refreshTokenRequest
             .then((access_token) => {
-              error.response.config.Authorization = access_token
-              return this.instance(error.response.config)
+              this.instance(error.response.config)
             })
             .catch((refreshTokenerror) => {
               throw refreshTokenerror
