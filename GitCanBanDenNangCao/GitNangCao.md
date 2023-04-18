@@ -121,7 +121,7 @@ error: failed to push some refs to 'git@repository_name'
 
 Khi ai đó đã xóa một branch trên remote nhưng khi bạn gõ `git branch -r` vẫn show ra origin branch đó thì bạn cần thực hiện đồng bộ hóa bằng câu lệnh dưới đây.
 
-```bash
+```javascript
 git fetch -p
 ```
 
@@ -197,6 +197,19 @@ Nếu merge xong rồi mới nhận ra mình không cần merge nữa thì có t
 >
 > Bạn cũng có thể tạo merge request (một số chỗ gọi là pull request) bằng git server như Github thay vì dùng câu lệnh. Những merge request này được tạo ra để phục vụ việc team review và approve code.
 
+```
+Apples-MacBook-Pro:fast-testing apple$ git log --oneline
+4de7eba (HEAD -> alpha) Merge branch 'beta' into alpha
+b329a1a (origin/alpha) dev alpha: super
+dc95363 (origin/beta, beta) dev beta: updateProject
+6070bbe dev beta: booking
+cf8cd21 dev alpha: cart
+0ba7f2c (origin/main, main) new change
+303d171 first commit
+c995c5d first commit
+
+git revert -m 1 4de7eba   // gõ dòng này nó sẽ revert nhánh ko cho gộp nhánh alpha và beta với nhau nữa
+```
 ### git rebase
 
 Lấy tất cả các commit của `branchTarget` làm lại base (gọi là re-base) cho mình, các commit của mình mà khác so với `branchTarget` sẽ bị thay đổi hash và thêm vào sau cùng.
